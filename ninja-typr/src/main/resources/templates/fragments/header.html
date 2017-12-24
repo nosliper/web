@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:fragment="head">
+		<title th:text="${title}">ninja typr</title>
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/ninja-style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<!-- Shared Navbar -->
+		<header th:fragment="header">	
+			<div class="navbar-fixed teal darken-4">
+				<nav>
+					<div class="nav-wrapper teal darken-4">
+					<a href="/" class="brand-logo">ninja typr</a>
+						<ul class="right hide-on-med-and-down">
+							<li><a href="/">home</a></li>
+							<li th:if="${loggedIn}"><a href="#" th:href="@{${'/stats/' + user.username}}" th:text="${user.username}">my stats</a></li>
+							<li><a href="#" th:href="@{${loggedIn} ? '/logout' : '/login'}" th:text="${loggedIn ? 'logout' : 'login/signup'}">login</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+	</body>
+</html>

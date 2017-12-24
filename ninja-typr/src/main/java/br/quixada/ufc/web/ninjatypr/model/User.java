@@ -1,0 +1,77 @@
+package br.quixada.ufc.web.ninjatypr.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+//import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
+@Entity
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@NotNull(message = "This is a required field")
+	@Size(min = 3, max = 15, message = "You username must be between 3 and 15 characters long.")
+	@Column(unique = true)
+	private String username;
+	
+	@NotNull
+	@Email(message = "You must type a valid email address.")
+	//@Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$;")
+	@Column(unique = true)
+	private String email;
+	
+	@NotNull(message = "This is a required field")
+	@Size(min = 6, max = 32, message="Your password must have between 6 and 32 characters")
+	private String password;
+	
+	@OneToMany(mappedBy = "user")
+	private List<SpeedTest> tests = new ArrayList<SpeedTest>();
+	
+	public User(){
+	
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public List<SpeedTest> getTests() {
+		return tests;
+	}
+	public void setTests(List<SpeedTest> tests) {
+		this.tests = tests;
+	}
+	
+}

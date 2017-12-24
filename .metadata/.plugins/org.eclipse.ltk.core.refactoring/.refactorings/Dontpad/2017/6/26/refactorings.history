@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;session&apos; in &apos;main.java.br.ufc.qx.wed.dontpad.controller.AutenticarUsuarioController.service(...)&apos; to &apos;sessao&apos;&#x0A;- Original project: &apos;Dontpad&apos;&#x0A;- Original element: &apos;main.java.br.ufc.qx.wed.dontpad.controller.AutenticarUsuarioController.service(HttpServletRequest, HttpServletResponse).session&apos;&#x0A;- Renamed element: &apos;session&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;session&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;main.java.br.ufc.qx.wed.dontpad.controller{AutenticarUsuarioController.java[AutenticarUsuarioController~service~QHttpServletRequest;~QHttpServletResponse;@session!1296!1338!1308!1314!QHttpSession;!0!false" name="sessao" references="true" stamp="1498692565947" version="1.0"/>
+</session>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title th:text="${title}">ninja typr</title>
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="../css/ninja-style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+	<header th:replace="fragments/header :: header">
+	</header>
+	<main>
+        <div id="profile-info-box">
+			<form id="profile-info-form" th:object="${user}">
+                <div class="input-field col s12">
+                    <input id="username" required="required" type="text" th:field="*{username}"/>
+                    <label th:for="*{username}">username</label>
+                    <span class="error" th:errors="*{username}"></span>
+                </div>
+                <div class="input-field col s12">
+                    <input id="email" required="required" type="text" th:field="*{email}"/>
+                    <label th:for="*{email}">email</label>
+                    <span class="error" th:error="*{email}"></span>
+                </div>
+            </form>
+        </div>
+	</main>
+	<div>
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    	<script type="text/javascript" src="../js/materialize.min.js"></script>
+	</div>
+	<footer th:replace="fragments/footer :: footer">
+	</footer>
+	</body>
+</html>

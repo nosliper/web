@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/header :: head">
+		
+	</head>
+	<body>
+		<header th:replace="fragments/header :: header">
+		</header>
+		<main>
+			<div id="test-container">
+				<h3>type the text below as fast as you can:</h3>
+				<div id="timer-box">
+					<span id="timer">1:00</span>
+				</div>
+				<div id="sample">
+					<div id="spacer">
+						
+					</div>
+				</div>
+				<form id="test-form" class="col s16" action="/results" method="post">
+					<div id="typing-row">
+						<input id="typing-area" class="typing-area-normal" placeholder="type it here..." autofocus="true" autocomplete="off" spellcheck="false"/>
+					</div>
+					<div id="test-data">
+						<input id="keystrokes" type="hidden" name="keystrokes"/>
+						<input id="correct-words" type="hidden" name="correct"/>
+						<input id="misspelled" type="hidden" name="misspelled"/>
+						<input id="correct-keystrokes" type="hidden" name="correctks"/>
+					</div>
+				</form>
+			</div>
+		</main>
+		<div th:replace="fragments/footer :: scripts">
+		</div>
+		<script type="text/javascript" src="js/test-samples.js"></script>
+		<script type="text/javascript" src="js/ninja-script.js"></script>
+		<footer th:replace="fragments/footer :: footer">
+		</footer>
+	</body>
+</html>

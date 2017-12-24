@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;br.ufc.qx.tizeeter.dao.UsuarioDAO.exists(...)&apos; to &apos;existe&apos;&#x0A;- Original project: &apos;tiziu&apos;&#x0A;- Original element: &apos;br.ufc.qx.tizeeter.dao.UsuarioDAO.exists(...)&apos;&#x0A;- Renamed element: &apos;br.ufc.qx.tizeeter.dao.UsuarioDAO.existe(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;exists&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;br.ufc.qx.tizeeter.dao{UsuarioDAO.java[UsuarioDAO~exists~QUsuario;" name="existe" references="true" stamp="1496414447554" version="1.0"/>
+</session>
