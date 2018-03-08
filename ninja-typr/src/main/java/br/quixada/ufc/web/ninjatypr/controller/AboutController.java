@@ -18,5 +18,4 @@ public class AboutController {
 		model.addAttribute("user", session.getAttribute("user"));
 		return "about";
 	}
-	
 }
