@@ -1,0 +1,150 @@
+body {
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+	flex: 1 0 auto;
+}
+.brand-logo {
+	color: white;
+	font-size: big;
+	font-family: Lobster;
+	margin-left: 15px;
+}
+#btn-login {
+	font-family: Lobster;
+	text-transform: lowercase;
+}
+#btn-signup {
+	font-family: Lobster;
+	font-size: big;
+	text-transform: lowercase;
+}
+#form-container {
+	text-align: center;
+	margin-top: 100px;
+	width: 35%;
+	min-width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+.input-field {
+	width: 100%;
+	display: block;
+}
+#login-form {
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+#signup-form {
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+#signup-link {
+	margin-top: 10px;
+}
+.error {
+	color: red;
+	font-size: small;
+}
+.about {
+	text-align: center;
+	color: black;
+}
+#test-container {
+	display: block;
+	background: white;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	min-width: 200px;
+	text-align: center;
+}
+#sample {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 138px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	font-size: 25px;
+	padding: 5px 5px;
+	box-sizing: border-box;
+}
+.typing-area-wrong {
+	color: red;
+}
+.typing-area-normal {
+	color: black;
+	background: #e3f2fd;
+}
+#typing-area {
+	position: relative;
+	float: left;
+	font-size: 25px;
+	margin-top: 20px;
+	width: 100%;
+	border-radius: 7px;
+	padding: 5px 10px;
+	box-sizing: border-box; 
+}
+#timer-box {
+	width: 100%;
+	padding: 5px 5px;
+	margin-bottom: 10px;
+	font-size: 25px;
+	color: gray;
+	box-sizing: border-box;
+	text-align: center;
+}
+.results-box {
+	background: #044b3f;
+	width: 25%;
+	color: white;
+	border: 2px solid gray;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#test-speed {
+	text-align: center;
+	font-size: 50px;
+	font-family: Arial;
+}
+.sample-word {
+	display: inline-block;
+	margin: 3px 6px;
+}
+.sample-word-highlight {
+	display: inline-block;
+	border-radius: 3px;
+	margin: 3px 6px;
+	background: #dddddd;
+}
+.sample-word-wrong {
+	display: inline-block;
+	border-radius: 3px;
+	margin: 3px 6px;
+	color: red;
+}
+.sample-word-correct {
+	display: inline-block;
+	border-radius: 3px;
+	margin: 3px 6px;
+	color: blue;
+}
+#spacer {
+	position: relative;
+	top: 1px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
